@@ -19,7 +19,7 @@
 
     <main>
         <div class="container my-5">
-            <h1 class="text-center">ciaos</h1>
+            <h1 class="text-center">Station</h1>
         </div>
     </main>
 
