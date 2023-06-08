@@ -19,7 +19,28 @@
 
     <main>
         <div class="container my-5">
-            <h1 class="text-center">Station</h1>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">In arrivo da:</th>
+                  <th scope="col">Destinazione:</th>
+                  <th scope="col">Orario di partenza:</th>
+                  <th scope="col">Orazio di arrivo:</th>
+                  <th scope="col">Ritardo</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach ($trains as $train)
+                  <tr>
+                    <td>{{ $train->departure_station }}</td>
+                    <td>{{ $train->arrival_station }}</td>
+                    <td>{{ $train->departure_time }}</td>
+                    <td>{{ $train->time_of_arrival }}</td>
+                    <td>{{ ($train->in_time) ? 'Si' : 'No' }}</td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
         </div>
     </main>
 
